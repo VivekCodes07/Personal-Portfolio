@@ -1,3 +1,4 @@
+/* ===== EXISTING CSS (yours) ===== */
 * {
   margin: 0;
   padding: 0;
@@ -185,4 +186,102 @@ body {
   border-radius: 0; /* square shape */
   border: 4px solid #00abf0;
   box-shadow: 0 0 30px rgba(0, 171, 240, 0.6);
+}
+
+/* ===== RESPONSIVE MEDIA QUERIES ===== */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .header {
+    padding: 15px 5%;
+  }
+
+  .navbar a {
+    margin-left: 20px;
+    font-size: 16px;
+  }
+
+  .home {
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 5% 0;
+  }
+
+  .home-content h1 {
+    font-size: 40px;
+  }
+
+  .home-content h3 {
+    font-size: 24px;
+  }
+
+  .home-img img {
+    width: 280px;
+    height: 280px;
+    margin-top: 20px;
+  }
+
+  .home-sci {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    background: rgba(8, 27, 41, 0.95);
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+
+  .navbar a {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+
+  .home-content h1 {
+    font-size: 32px;
+  }
+
+  .home-content h3 {
+    font-size: 20px;
+  }
+
+  .home-content p {
+    font-size: 14px;
+  }
+
+  .button-box {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+  }
+
+  .button-box a {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .home-img img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .home-sci {
+    gap: 10px;
+    font-size: 18px;
+  }
 }
