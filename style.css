@@ -1,4 +1,4 @@
-/* ===== EXISTING CSS (yours) ===== */
+/* ===== EXISTING CSS UPDATED ===== */
 * {
   margin: 0;
   padding: 0;
@@ -11,17 +11,18 @@ body {
   color: white;
 }
 
+/* ===== UPDATED NAVBAR STYLES ===== */
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   padding: 20px 10%;
-  background: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+  background: #081b29; /* solid background like About page */
 }
 
 .logo {
@@ -45,6 +46,7 @@ body {
   color: #00abf0;
 }
 
+/* HOME / HERO SECTION */
 .home {
   height: 100vh;
   display: flex;
