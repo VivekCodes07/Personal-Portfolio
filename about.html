@@ -5,123 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | Vivek</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
+    body { background: #081b29; color: white; }
 
-    body {
+    .header { 
+      position: fixed; 
+      top: 0; left: 0; 
+      width: 100%; 
+      padding: 20px 10%; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      z-index: 100; 
       background: #081b29;
-      color: white;
     }
+    .logo { font-size: 25px; color: white; text-decoration: none; font-weight: 600; }
+    .navbar a { font-size: 18px; color: white; text-decoration: none; font-weight: 500; margin-left: 35px; transition: 0.3s; }
+    .navbar a:hover, .navbar a.active { color: #00abf0; }
 
-    .header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 20px 10%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 100;
+    section { 
+      min-height: 100vh; 
+      display: flex; 
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center; 
+      text-align: center; 
+      padding: 100px 10% 50px;
     }
+    section h1 { font-size: 48px; color: #00abf0; margin-bottom: 20px; }
 
-    .logo {
-      font-size: 25px;
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .navbar a {
-      font-size: 18px;
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      margin-left: 35px;
-      transition: 0.3s;
-    }
-
-    .navbar a:hover,
-    .navbar a.active {
-      color: #00abf0;
-    }
-
-    section {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 0 10%;
-    }
-
-    section h1 {
-      font-size: 48px;
-      color: #00abf0;
-    }
-
-    section p {
-      font-size: 18px;
-      margin-top: 20px;
+    .about-card {
+      background: #0c2a3e;
+      padding: 30px 25px;
+      border-radius: 10px;
       max-width: 700px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      transition: transform 0.3s, background 0.3s;
     }
+    .about-card:hover { transform: translateY(-8px); background: #0f3a55; }
+    .about-card img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; }
 
-    /* ===== RESPONSIVE MEDIA QUERIES ===== */
+    .about-card p { font-size: 16px; line-height: 1.6; color: #ddd; text-align: left; }
 
-    /* Tablets */
-    @media (max-width: 992px) {
-      .header {
-        padding: 15px 5%;
-      }
-
-      .navbar a {
-        margin-left: 20px;
-        font-size: 16px;
-      }
-
-      section h1 {
-        font-size: 36px;
-      }
-
-      section p {
-        font-size: 16px;
-      }
+    @media (max-width: 768px) {
+      .header { padding: 15px 5%; flex-direction: column; align-items: flex-start; }
+      .navbar { margin-top: 10px; display: flex; flex-wrap: wrap; }
+      .navbar a { margin: 8px 12px 0 0; font-size: 16px; }
+      section h1 { font-size: 36px; }
+      .about-card { flex-direction: column; text-align: center; }
+      .about-card p { text-align: center; }
     }
-
-    /* Mobile */
-    @media (max-width: 576px) {
-      .navbar {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        position: absolute;
-        top: 70px;
-        right: 10px;
-        background: rgba(8, 27, 41, 0.95);
-        padding: 10px 20px;
-        border-radius: 8px;
-      }
-
-      .navbar a {
-        margin: 5px 0;
-        font-size: 14px;
-      }
-
-      section {
-        padding: 100px 5% 0;
-      }
-
-      section h1 {
-        font-size: 28px;
-      }
-
-      section p {
-        font-size: 14px;
-      }
+    @media (max-width: 480px) {
+      .logo { font-size: 20px; }
+      .navbar a { font-size: 14px; margin-left: 10px; }
+      section h1 { font-size: 28px; }
     }
   </style>
 </head>
@@ -138,11 +77,14 @@
   </header>
 
   <section>
-    <div>
-      <h1>About Me</h1>
+    <h1>About Me</h1>
+    <div class="about-card">
+      <img src="https://i.pinimg.com/564x/1b/5c/84/1b5c8488c3b9b8c72ef2d12f8822dcdc.jpg" alt="Cat Profile">
       <p>
-        I’m Vivek, a passionate frontend developer who loves turning ideas into
-        interactive and visually appealing web experiences.
+        I’m Vivek, a passionate frontend developer who loves turning ideas into interactive 
+        and visually appealing web experiences. I specialize in creating responsive, modern, 
+        and user-friendly websites that work seamlessly on all devices. My focus is on clean 
+        design, smooth functionality, and continuous learning to deliver the best results.
       </p>
     </div>
   </section>
